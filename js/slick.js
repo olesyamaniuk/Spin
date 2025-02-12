@@ -12,8 +12,7 @@ $(function () {
     dots: false,
     centerMode: true,
     cssEase: 'linear',
-    prevArrow: '.gallery-list-left',
-    nextArrow: '.gallery-list-right',
+
   });
 });
 

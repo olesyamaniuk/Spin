@@ -344,6 +344,10 @@ a {
 .home__google-button_link {
   margin: auto;
 }
+.home__google-button_image {
+  width: 256px;
+  height: 64px;
+}
 .home__google-button_link:hover .home__google-button_image {
   transform: scale(1.1);
   transition: transform 0.3s ease-in-out;
@@ -723,14 +727,15 @@ a {
 }
 
 .gallery__list {
-  width: auto;
+  width: 334px;
   padding-top: 40px;
   padding-bottom: 40px;
-  margin: auto;
+  margin: 0;
 }
 .gallery__item {
   width: 326px;
   height: 581px;
+  border-radius: 24px;
 
   overflow: hidden;
   position: relative;
@@ -745,13 +750,28 @@ a {
 }
 .gallery-button-link {
   margin: auto;
+  width: 256px;
 }
 .gallery-button-link:hover {
   transform: scale(1.1);
   transition: transform 0.3s ease-in-out;
 }
-
+.slick-prev:before {
+  display: none;
+}
+.slick-next:before {
+  display: none;
+}
 @media screen and (min-width: 1200px) {
+  .slick-prev:before {
+    display: flex;
+    content: url("/image/reviews/Arrow.png");
+    margin-left: -45px;
+  }
+  .slick-next:before {
+    display: flex;
+    content: url("/image/reviews/Arrow\ \(1\).png");
+  }
   .gallery {
     width: 1440px;
     height: 1005px;
@@ -773,8 +793,12 @@ a {
   }
 
   .gallery__list {
-    width: auto;
-    padding: 80px 0 40px;
+    width: 940px;
+    padding: 80px 0px 40px;
+    margin: auto;
+  }
+  .gallery-button-link {
+    margin-top: 100px;
   }
 }
 .features {
